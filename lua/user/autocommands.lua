@@ -28,6 +28,17 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+
+  augroup templates
+    autocmd BufNewFile *.html 0r ~/.vim/skeleton/bootstrap.py
+    autocmd BufNewFile *.py 0r ~/.vim/skeleton/python3.py
+    autocmd BufNewFile *.c 0r ~/.vim/skeleton/main.c
+  augroup END
+
+  augroup buildsystems
+    autocmd!
+      autocmd FileType c setlocal makeprg=gcc\ -Wall\ -g\ %\ %<
+      autocmd FileType python setlocal makeprg=python3\ %
 ]]
 
 -- Autoformat
