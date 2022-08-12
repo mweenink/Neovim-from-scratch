@@ -31,9 +31,9 @@ vim.cmd [[
 
   augroup templates
     autocmd!
-    autocmd BufNewFile *.html 0r ~/.vim/skeleton/bootstrap.html
-    autocmd BufNewFile *.py 0r ~/.vim/skeleton/python3.py
-    autocmd BufNewFile *.c 0r ~/.vim/skeleton/skeleton.c
+    autocmd BufNewFile *.html 0r ~/.config/nvim/skeleton/bootstrap.html
+    autocmd BufNewFile *.py 0r ~/.config/nvim/skeleton/python3.py
+    autocmd BufNewFile *.c 0r ~/.config/nvim/skeleton/skeleton.c
   augroup end
 
   augroup buildsystems
